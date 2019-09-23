@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ТЗ UpTrader</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="flash"></div>
+	<div class="main">
+		<div class="container">
+
+			<div class="choose-menu">
+				<div class="choose-menu__top-block">
+					<h2 class="choose-menu__caption">Выберите способ заработка</h2>	
+				</div>
+						
+				<div class="menu-block">
+
+					<div class="trade" onclick="openTopMenu('Trade')">
+						<div class="trade-top__border">
+							<div class="trade-top">
+								<img class="trade-top__img" src="images/icon.png">
+							</div>
+							<div class="trade-bottom__container">
+								<p class="menu-block__text">Торговать</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="invest" onclick="openTopMenu('Invest')">
+						<div class="invest-top__border">
+							<div class="invest-top">
+								<img class="invest-top__img"  src="images/icon2.png">
+							</div>
+							<div class="invest-bottom__container">
+								<p class="menu-block__text">Инвестировать</p>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="attract" onclick="openTopMenu('Attract')">
+						<div class="attract-top__border">
+							<div class="attract-top">
+								<img class="attract-top__img"  src="images/icon3.png">
+							</div>
+							<div class="attract-bottom__container">
+								<p class="menu-block__text">Привлекать инвесторов</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom-bg">	
+		<!-- * * * NAV * * * -->
+		<!-- <div class="container-bottom"> -->
+
+			<div class="bottom-bg__top-block">
+				<h2 class="bottom-bg__caption">Выберите способ заработка</h2>	
+			</div>
+
+			<!-- <div class="container"> -->
+				<div class="tab-menu">
+
+					
+				  	<div class="tab-block">
+						<div id="trade-new" class="trade-bottom" onclick="openMenu(event, 'Trade')">
+							<div class="trade-top__block">
+								<img class="trade-top-block__img" src="images/icon.png">
+							</div>
+							<div class="trade-bottom__block">
+								<p class="tab-block__text" id="trade-text">Торговать</p>
+							</div>
+							<div class="arrow__block">
+								<img id="trade-arrow" class="arrow__block__img" src="images/bot.png">
+							</div>
+						</div>
+
+
+						<div id="invest-new" class="invest-bottom" onclick="openMenu(event, 'Invest')">
+							<div class="invest-top__block">
+								<img class="invest-top-block__img" src="images/icon2.png">
+							</div>
+							<div class="invest-bottom__block">
+								<p class="tab-block__text" id="invest-text">Инвестировать</p>
+							</div>
+							<div class="arrow__block">
+								<img id="invest-arrow" class="arrow__block__img" src="images/bot.png">
+							</div>
+						</div>
+
+
+						<div id="attract-new" class="attract-bottom" onclick="openMenu(event, 'Attract')">
+							<div class="attract-top__block">
+								<img class="attract-top-block__img" src="images/icon3.png">
+							</div>
+							<div class="attract-bottom__block">
+								<p class="tab-block__text" id="attract-text">Привлекать инвесторов</p>
+							</div>
+							<div class="arrow__block">
+								<img id="attract-arrow" class="arrow__block__img" src="images/bot.png">
+							</div>
+						</div>
+
+					</div>
+				</div>
+			<!-- </div> -->
+
+			<!-- контент -->
+			<div class="content">
+				<div class="container">
+
+					<!-- < 420 px; -->
+
+
+					<div id="Trade" class="tab-content content-styles">
+						<div class="info">
+							<p class="info__description">Если вы ищете пассивный доход и предпочитаете, чтобы деньги для вас зарабатывал тот, кто умеет это делать, тогда попробуйте ЛАММ. ЛАММ – это сервис копирования сделок успешных трейдеров. Доходность ни чем не ограничена!
+							</p>
+
+							<p class="info__caption">Как это работает</p>
+							
+							<div class="item-block">
+								<p class="info__number">1</p><p class="info__item"> Вы выбираете управляющего из рейтинга по фильтру Options</p>
+							</div>
+
+							<div class="item-block">
+								<p class="info__number">2</p><p class="info__item">Подключаете свой счет к счету Управляющего</p>
+							</div>
+
+							<div class="item-block">
+								<p class="info__number">3</p><p class="info__item">На вашем счете начинается копирование сделок</p>
+							</div>
+
+							<div class="item-block">
+								<p class="info__number">4</p><p class="info__item">Обратите внимание, что вы не перечисляете свои деньги Управляющему. Все ваши средства остаются на Вашем счете.</p>
+							</div>
+
+							<div class="item-block">
+								<p class="info__number">5</p><p class="info__item">Вы можете подключиться к нескольким Управляющим одновременно.</p>
+							</div>
+
+							<div class="item-block">	
+								<p class="info__number">6</p><p class="info__item">Вы можете отключиться от Управляющих в любой момент.</p>
+							</div>
+
+						</div>
+						<a class="btn" href="#">Продолжить</a>
+						<!-- <div class="btn_2">Продолжить</div>	 -->
+					</div>
+
+					<div id="Invest" class="tab-content content-styles">
+					  <p class="tab-content__caption">Инвестировать</p>
+					  <p class="tab-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut justo dui, eleifend eget lacus ornare, sagittis laoreet turpis. Nam nisi metus, auctor eget elit sed, consectetur vehicula tortor. Maecenas at sem non enim dignissim mollis. Nulla ultricies, dui ac feugiat ultricies, nisi mi semper quam, in commodo dui nisi vel felis. Quisque et semper est, quis ultricies nunc. Sed viverra, lacus quis elementum ultrices, turpis tortor consequat ipsum, quis vulputate orci mauris rhoncus tortor. Mauris nec condimentum nunc, ut ultricies tortor..</p>
+					</div>
+
+					<div id="Attract" class="tab-content content-styles">
+					  <p class="tab-content__caption">Привлекать инвесторов</p>
+					  <p class="tab-content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut justo dui, eleifend eget lacus ornare, sagittis laoreet turpis. Nam nisi metus, auctor eget elit sed, consectetur vehicula tortor. Maecenas at sem non enim dignissim mollis. Nulla ultricies, dui ac feugiat ultricies, nisi mi semper quam, in commodo dui nisi vel felis. Quisque et semper est, quis ultricies nunc. Sed viverra, lacus quis elementum ultrices, turpis tortor consequat ipsum, quis vulputate orci mauris rhoncus tortor. Mauris nec condimentum nunc, ut ultricies tortor..</p>
+					</div>
+				</div>
+			</div>	
+
+</div>
+
+
+	<script type="text/javascript">
+
+	function openTopMenu(menuName) {
+
+	  document.getElementById(menuName).style.display = "block";
+
+	  if(menuName == "Trade") {
+	  	console.log("Нажата кнопка trade");
+	  	$("#trade-text").addClass("activeColor");
+	  	$("#trade-arrow").addClass("rotate");
+	  	$(".trade-bottom").addClass("active");
+
+	  }	
+
+	  if(menuName == "Invest") {
+	  	console.log("Нажата кнопка invest");
+	  	$("#invest-text").addClass("activeColor");
+	  	$("#invest-arrow").addClass("rotate");
+	  	$(".invest-bottom").addClass("active");
+	  }
+
+	  if(menuName == "Attract") {
+	  	console.log("Нажата кнопка attract");
+	  	$("#attract-text").addClass("activeColor");
+	  	$("#attract-arrow").addClass("rotate");
+	  	$(".attract-bottom").addClass("active");
+	  }
+
+
+	}
+  
+	function openMenu(evt, menuName) {
+	  // Declare all variables
+	  // Объявляем все переменные
+	  var i, tabcontent, tab__link;
+
+	  // Get all elements with class="tab-content" and hide them
+	  // Получаем все элементы с class = "tab-content" и скрываем их
+	  tabcontent = document.getElementsByClassName("tab-content");
+	  for (i = 0; i < tabcontent.length; i++) {
+	    tabcontent[i].style.display = "none";
+	  }
+
+	  // Get all elements with class="tab__link" and remove the class "active"
+	  // Получить все элементы с class = "tab__link" и удаляем класс "active"
+	  // tab__link = document.getElementsByClassName("tab-menu__link");
+	  // for (i = 0; i < tab__link.length; i++) {
+	  //   tab__link[i].className = tab__link[i].className.replace(" active", "");
+	  // }
+
+	  $(".trade").removeClass("active");
+	  $(".invest").removeClass("active");
+	  $(".attract").removeClass("active");
+  	  $(".trade-bottom").removeClass("active");
+	  $(".invest-bottom").removeClass("active");
+	  $(".attract-bottom").removeClass("active");
+
+	  $("#trade-arrow").removeClass("rotate");
+	  $("#invest-arrow").removeClass("rotate");
+	  $("#attract-arrow").removeClass("rotate");
+
+
+
+  	  $(".tab-block__text").removeClass("activeColor");
+  	  // $(".tab-block__text").removeClass("activeColor");
+
+  	  // $(".arrow__block__img").addClass("rotate");
+
+	  // Show the current tab, and add an "active" class to the button that opened the tab
+	  // Показать текущую вкладку и добавить «активный» класс к кнопке, открывшей вкладку
+	  document.getElementById(menuName).style.display = "block";
+
+	  if(menuName == "Trade") {
+	  	$("#trade-arrow").addClass("rotate");
+	  }	
+
+	  if(menuName == "Invest") {
+	  	$("#invest-arrow").addClass("rotate");
+	  }
+
+	  if(menuName == "Attract") {
+	  	$("#attract-arrow").addClass("rotate");
+	  }
+
+
+	  evt.currentTarget.className += " active";
+	  // evt.currentTarget.children($('trade-top__block')).className += " active";
+      // $(event..currentTarget).children('дочерний класс айди или тег').addClass("active")
+      // $(event.currentTarget).children($('trade-top__block')).addClass("active");
+      $(event.currentTarget).children($('invest-bottom__block')).children($('tab-block__text')).addClass("activeColor");
+      // console.log($(event.currentTarget));
+      // console.log($(event.currentTarget)).children($('tab-block__text'));
+	}
+
+
+
+
+
+
+
+
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var panel = this.nextElementSibling;
+	    if (panel.style.display === "block") {
+	      panel.style.display = "none";
+	    } else {
+	      panel.style.display = "block";
+	    }
+	  });
+	}
+
+
+
+
+	</script>
+
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-migrate.min.js" ></script>
+	<script type="text/javascript" src="js/custom.js" ></script>
+
+</body>
+</html>

@@ -1,0 +1,967 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: pfdintextpro; /* Имя шрифта */
+  src: url(fonts/pfdintextpro-light.ttf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: Pompadur; /* Имя шрифта */
+  src: url(fonts/Pompadur.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+   font-family: "PFDinTextPro";
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.main {
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover;
+  transition: 1s; 
+}
+
+.main:hover {
+
+  
+}
+
+.flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+.choose-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.choose-menu__caption {
+  padding-bottom: 10.5vh;
+  font-size: 3em;
+  font-family: "PFDinTextPro";
+  color: rgb(23, 23, 23);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.menu-block {
+  display: flex;
+  max-width: 1200px;
+  width: 63vw;
+  justify-content: space-between;
+  /*margin: auto;*/
+}
+
+.tab-block {
+  display: flex;
+  max-width: 1200px;
+  width: 63vw;
+  height: 115px;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.tab-block__text {
+  font-size: 1.8em;
+  font-family: "PFDinTextPro";
+  color: rgb(36, 36, 36);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.menu-block__text {
+  font-size: 1.8em;
+  font-family: "PFDinTextPro";
+  color: rgb(36, 36, 36);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.choose-menu {
+  display: flex;
+}
+
+.choose-name {
+  text-align: center;
+}
+
+.choose-name__caption {
+  /*padding-top: 200px;*/
+}
+
+.bottom-yak {
+  text-decoration: none;
+  color: #242424;
+}
+
+.trade-top__border,.invest-top__border,.attract-top__border {
+  max-width: 357px;
+  max-height: 357px;
+  width: 18vw;
+  height: 18vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vw;
+  /*border: 1px solid seagreen;*/
+  /*display: none;*/
+}
+
+.trade-top__border:hover,.invest-top__border:hover,.attract-top__border:hover {
+  border: 1px solid #37bfb6; 
+}
+
+
+
+.trade,.invest,.attract {
+  max-width: 365px;
+  max-height: 365px;
+  width: 19vw;
+  height: 19vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vw;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.trade-bottom,.invest-bottom,.attract-bottom {
+    max-width: 365px;
+    max-height: 365px;
+    width: 19vw;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border-radius: 100vw;*/
+    cursor: pointer;
+    /*background-color: rgba(255, 255, 255, 0.6);*/
+    position: relative;
+}
+
+
+
+.bottom-bg {
+  background-image: url(images/bg_bottom.png);
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trade-btn,.invest-btn,.attract-btn {
+  padding: 50px 114px;
+}
+
+.trade-btn__text {
+  
+}
+
+.trade-top {
+/*  width: 90%;
+  height: 90%;*/
+}
+
+.info {
+  width: 53%;
+  padding-top: 86px;
+}
+
+.info__description {
+  font-family: "PFDinTextPro";
+  font-size: 1.125em;
+  color: rgb(28, 28, 28);
+  padding-bottom: 48px;
+}
+
+.info__caption {
+  font-size: 1.5em;
+  padding-bottom: 36px;
+  color: rgb(23, 23, 23);
+  font-family: "PFDinTextPro";
+  line-height: 1.2;
+}
+
+.info__number {
+  font-size: 32px;
+  font-family: "Myriad Pro";
+  color: rgb(0, 181, 150);
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.info__item {
+  font-size: 1.125em;
+  font-family: "PFDinTextPro";
+  color: rgb(29, 29, 29);
+  line-height: 1.2;
+}
+
+.tab-content__caption {
+  font-size: 1.5em;
+  padding-bottom: 36px;
+  color: rgb(23, 23, 23);
+  font-family: "PFDinTextPro";
+  line-height: 1.2;
+}
+
+.tab-content__text {
+  font-size: 1.125em;
+  font-family: "PFDinTextPro";
+  color: rgb(29, 29, 29);
+  line-height: 1.2;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    border-radius: 3px;
+    background-color: rgb(0, 158, 130);
+    padding: .7em 1.5em;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 41px;
+    margin-bottom: 41px;
+}
+
+
+/* Style the tab */
+.tab-menu {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab-menu button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 50px 0px;
+  /*transition: 0.3s;*/
+
+}
+
+.tab-menu__link {
+  border-bottom: 2px solid inherit;
+  font-family: PFDinTextPro;
+  font-size: 28px;
+  color: rgb(0, 158, 130);
+  line-height: 1.2;
+}
+
+/* Change background color of buttons on hover */
+.tab-menu button:hover {
+  color: #79c4b6;
+  border-bottom: 2px solid #79c4b6;
+}
+
+.tab-menu__link:hover {
+  border-bottom: 2px solid inherit;
+}
+
+/* Create an active/current tablink class */
+/*.tab-menu button.active {
+  color: #79c4b6;
+  border-bottom: 2px solid #79c4b6; 
+}*/
+
+.tab-menu__link {
+  max-width: 365px;
+    /* margin: 0 2vw 0 2vw; */
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_tab {
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  width: 100%;
+  /*height: 100vh;*/
+}
+
+
+/* Style the tab content */
+.tab-content {
+  display: none;
+}
+
+.content-styles {
+  /*display: flex;*/
+  max-width: 1200px;
+  width: 63vw;
+  height: auto;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.item-block {
+  display: flex;
+    align-items: center;
+}
+
+.info__item {
+  padding-left: 19px;
+  display: inline-block;
+  padding-top: 5px;
+}
+
+.tab-content__caption {
+  padding-top: 86px;
+}
+
+.tab-content__text {
+  padding-top: 36px;
+}
+
+.bottom-bg__top-block {
+  display: none;
+}
+
+.trade-top__block,.invest-top__block,.attract-top__block {
+  display: none;
+}
+
+/*.container-bottom {
+  display: none;
+}*/
+
+.trade-top,.invest-top,.attract-top {
+  margin-bottom: 2vh;
+}
+
+.trade-top__img,.invest-top__img,.attract-top__img {
+    height: 100%;
+}
+
+.activeColor {
+  color: green;
+}
+
+.active {
+  /*color: green;*/
+  border-bottom: 3px solid green;
+}
+
+.activeToogle {
+ border-bottom: 1px solid green; 
+}
+
+      /*    ACCORDION    */
+
+.accordion {
+  background-color: inherit;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  /*background-color: inherit;*/
+  /*background: red;*/
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: inherit; 
+  overflow: hidden;
+}
+
+.accordion_wrapper {
+  display: none;
+}
+
+.arrow__block {
+  display: none;
+}
+
+      /*    ANIMATION    */
+
+.up-content {
+  transition: 4.1s;
+  transform: translateY(-100%);
+
+}
+
+.shine {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: flash 3.3s linear;
+  opacity: 0;
+  z-index: 9999;
+}
+
+
+@-webkit-keyframes flash {
+    50% {opacity: 0}
+    51% {opacity: 1}
+    100% {opacity: 0}
+}
+
+@keyframes flash {
+    40% {opacity: 0}
+    41% {opacity: 1}
+    100% {opacity: 0}
+}
+
+
+      /*    MOBILE    */
+
+@media screen and (max-width : 1724px) {
+
+  .attract-bottom__container {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width : 1280px) {
+
+  .attract-bottom__container {
+    width: 90%;
+  }
+
+  .trade-top,.invest-top,.attract-top {
+    /*margin-bottom: 2vh;*/
+    height: 27%;
+  }
+
+@media screen and (max-width : 1100px) {
+
+  .choose-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choose-menu__caption {
+    font-size: 2.4em;
+  }
+
+  .menu-block__text {
+    font-size: 1.4em; 
+  }
+
+  .tab-block__text {
+    font-size: 1.4em; 
+  }
+
+  .trade-top,.invest-top,.attract-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trade-top {
+    max-width: 83px; 
+    max-height: 64px;
+  }
+
+  .invest-top {
+    max-width: 79px; 
+    max-height: 66px;
+  }
+
+  .attract-top {  
+    max-width: 70px; 
+    max-height: 84px;
+  }
+
+  .trade-top__img,.invest-top__img,.attract-top__img {
+    height: 100%;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+/*  .trade-top__img {
+    max-width: 83px; 
+    max-height: 64px;
+  }
+
+  .invest-top__img {
+    max-width: 79px; 
+    max-height: 66px;
+  }
+
+  .attract-top__img {
+    max-width: 70px; 
+    max-height: 84px;
+  }*/
+
+}
+
+@media screen and (max-width : 896px) {
+ /* .choose-menu__caption {
+    font-size: 2.0em;
+  }
+
+  .menu-block__text {
+    font-size: 1.1em; 
+  }
+
+  .tab-block__text {
+    font-size: 1.1em; 
+  }*/
+
+  .trade-top__border, .invest-top__border, .attract-top__border {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .trade, .invest, .attract {
+    width: 22vw;
+    height: 22vw;
+  }
+
+  .trade-bottom, .invest-bottom, .attract-bottom {
+    width: 22vw;
+    /*height: 22vw;*/
+  }
+
+  .menu-block {
+    width: 70vw;
+  }
+
+  .tab-block { 
+    width: 70vw;
+  }
+
+/* .choose-menu__caption {
+    font-size: 1.6em;
+  }
+
+  .menu-block__text {
+    font-size: 0.9em; 
+  }
+
+  .tab-block__text {
+    font-size: 0.9em; 
+  }*/
+
+
+
+}
+
+@media screen and (max-width : 768px) {
+
+  .choose-menu__caption {
+    font-size: 2.0em;
+  }
+
+  .menu-block__text {
+    font-size: 1.1em; 
+  }
+
+  .tab-block__text {
+    font-size: 1.1em; 
+  }
+
+
+}
+
+@media screen and (max-width : 650px) {
+
+  .trade, .invest, .attract {
+      width: 24vw;
+      height: 24vw;
+  }
+
+  .menu-block__border {
+      width: 22vw;
+      height: 22vw;
+  }
+
+  .menu-block {
+      width: 75vw;
+  }
+
+}
+
+@media screen and (max-width : 580px) {
+  .menu-block__border {
+      width: 23vw;
+      height: 23vw;
+  }
+}
+
+@media screen and (max-width : 560px) {
+    /*…*/
+/*}*/
+
+    .trade-top__border,.invest-top__border,.attract-top__border {
+      width: 100%;
+      height: 68px;
+      max-width: 100%;
+      flex-direction: row; 
+      justify-content: flex-start; 
+
+
+    }
+
+    .arrow__block {
+      display: block;
+      position: absolute;
+      right: 15px;
+    }
+
+    .arrow__block__img {
+
+    }
+
+    .activeToogle {
+      border-bottom: 0px;
+      transform: rotate(180deg);
+    }
+
+
+/*@media screen and (max-width : 376px) {*/
+/*    .display-flex {
+      flex-direction: column;
+    }
+
+    .tab-menu {
+      border-bottom: none;
+      display: none;
+    }
+
+    .tab-menu__link {
+      width: 100%;
+    }
+
+    .content {
+      display: none;
+    }
+
+    .accordion_wrapper {
+      display: block;
+    }*/
+
+    .trade-top, .invest-top, .attract-top {
+      /* margin-bottom: 2vh; */
+      height: 40%;
+    }
+
+
+    .bottom-bg {
+      background: #f3f2da;
+      background-repeat: no-repeat;
+    }
+
+    .content {
+      background: #f3f2da url(images/bg_bottom_mb_true2.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+    }
+
+    .trade-top__block,.invest-top__block,.attract-top__block {
+      display: block;
+      padding-left: 20px;
+    }
+
+
+/*    .trade-top,.invest-top,.attract-top { 
+      padding-left: 20px;
+    } */
+
+    .content-styles {
+      width: 90%;
+      padding-bottom: 90px;
+      /*background: #f3f2da url(images/bg_bottom_mb_true.png);*/
+    }
+
+    .tab-content__text {
+      padding-bottom: 220px;
+    }
+
+    .info {
+      padding-top: 23px;
+      width: 100%;
+    }
+
+    .info__description {
+      padding-bottom: 33px;
+    }
+
+
+    .trade-top-block__img,.invest-top-block__img,.attract-top-block__img {
+      height: 100%;
+    }
+
+    .trade-top__block, .trade-top-block__img {
+      max-width: 35px; 
+      max-height: 28px;
+    }
+
+    .invest-top__block,.invest-top-block__img {
+      max-width: 34px; 
+      max-height: 28px;
+    }
+
+    .attract-top__block,.attract-top-block__img {
+      max-width: 35px; 
+      max-height: 29px;
+    }
+
+
+    
+
+
+
+
+
+    .bottom-bg__top-block {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 46px;
+    }
+
+    .bottom-bg__caption {
+      padding-bottom: 30px;
+      font-size: 2.25em;
+      font-family: "PFDinTextPro";
+      color: rgb(23, 23, 23);
+      line-height: 1.2;
+      font-weight: 400;
+
+    }
+
+    .tab-block {
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+    }
+
+    .tab-menu {
+      border: none;
+    }
+
+    .trade-bottom,.invest-bottom,.attract-bottom {
+/*      width: 100%;
+      height: 19vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;*/
+      max-width: 100%;
+      border-radius: 0;
+      width: 100%;
+      height: 68px;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 13px;
+      justify-content: flex-start;
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+   .trade-bottom__block,.invest-bottom__block,.attract-bottom__block {
+      /*height: 68px;*/
+      display: flex;
+      align-items: center;
+    }
+
+    .tab-block__text {
+      font-size: 1.25em;
+      font-family: "PFDinTextPro";
+      color: rgb(43, 43, 43);
+      line-height: 1.2;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .tab-content__caption {
+      padding-top: 23px;
+      padding-bottom: 33px;
+    }
+
+    .tab-content__text {
+      padding-top: 5px;
+    }
+
+
+
+/*              вторая часть      */
+
+    .choose-menu {
+      justify-content: start;
+      padding-top: 46px;
+      /*height: none;*/
+    }
+
+    .choose-menu__caption {
+      padding-bottom: 30px;
+      font-size: 2.25em;
+      font-family: "PFDinTextPro";
+      color: rgb(23, 23, 23);
+      line-height: 1.2;
+      font-weight: 400;
+    }
+
+
+
+    .menu-block {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .trade, .invest, .attract {
+      border-radius: 0;
+      width: 100%;
+      height: 68px;
+      display: block;
+      margin-bottom: 13px;
+      justify-content: flex-start;
+      cursor: pointer;
+    }
+
+    .menu-block__text {
+      font-size: 1.25em;
+      font-family: "PFDinTextPro";
+      color: rgb(43, 43, 43);
+      line-height: 1.2;
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .trade, .invest, .attract {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+    }
+
+    .trade-top,.invest-top,.attract-top { 
+      padding-left: 20px;
+      margin-bottom: 0px;
+    } 
+
+    .trade-top {
+      max-width: 35px; 
+      max-height: 28px;
+    }
+
+    .invest-top {
+      max-width: 34px; 
+      max-height: 28px;
+    }
+
+    .attract-top {
+      max-width: 35px; 
+      max-height: 29px;
+    }
+
+/*    .container-bottom {
+      display: block;
+    }*/
+
+    .active {
+      /*color: green;*/
+      border-bottom: none !important;
+    }
+
+    .activeColor {
+      color: #2b2b2b !important;
+      /*transform: rotate(180deg);*/
+    }
+
+    .container {
+      margin: 0 auto;
+      width: 90%;
+      height: 100%;
+      min-height: 100vh;
+    }
+
+}
+
+/*@media screen and (max-width : 376px) {
+    .trade,.invest,.attract {
+      border-radius: 0;
+    width: 340px;
+    height: 68px;
+    }
+}*/
+
+
+
+
+
+
+/* PUBLIC */
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+  min-height: 100vh;
+}
+
+.container-bottom {
+  margin: auto;
+  max-width: 1200px;
+  height: 100vh;
+}
+
+.display-flex {
+  display: flex;
+  height: 100%;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+
+
+
+
